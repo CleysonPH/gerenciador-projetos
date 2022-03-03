@@ -22,9 +22,9 @@ public class MeRoutes {
         return linkTo(methodOn(MeControllerImpl.class).me());
     }
 
-    public static Link getMeLink() {
+    public static Link getSelfLink() {
         return getMeLinkBuilder()
-            .withRel("me")
+            .withSelfRel()
             .withType(GET.name());
     }
 

@@ -2,6 +2,8 @@ package com.cleysonph.gerenciadorprojetos.api.v1.config;
 
 import com.cleysonph.gerenciadorprojetos.api.v1.auth.services.AuthService;
 import com.cleysonph.gerenciadorprojetos.api.v1.auth.services.AuthServiceImpl;
+import com.cleysonph.gerenciadorprojetos.api.v1.me.assemblers.MeAssembler;
+import com.cleysonph.gerenciadorprojetos.api.v1.me.dtos.MeResponse;
 import com.cleysonph.gerenciadorprojetos.api.v1.me.mappers.MeMapper;
 import com.cleysonph.gerenciadorprojetos.api.v1.me.mappers.MeMapperImpl;
 import com.cleysonph.gerenciadorprojetos.api.v1.me.services.MeService;
@@ -199,6 +201,11 @@ public class ApiSpringBeansConfig {
     @Bean
     public Assembler<UsuarioResponse> usuarioAssembler() {
         return new UsuarioAssembler();
+    }
+
+    @Bean
+    public Assembler<MeResponse> meResponse(SecurityUtils securityUtils) {
+        return new MeAssembler(securityUtils);
     }
 
     @Bean
