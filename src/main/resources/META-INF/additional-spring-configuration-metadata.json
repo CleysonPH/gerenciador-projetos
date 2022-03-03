@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "com.cleysonph.gerenciadorprojetos.token.accessKey",
+      "type": "java.lang.String",
+      "description": "Chave de assinatura utilizada para gerar os access tokens da aplicação"
+    },
+    {
+      "name": "com.cleysonph.gerenciadorprojetos.token.accessExpiration",
+      "type": "java.lang.Integer",
+      "description": "Tempo de expiração do access token em segundos"
+    }
+  ]
+}
